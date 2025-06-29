@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Membuat Website & Upload ke GitHub Pages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253z"></path>
+                        </svg>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-900">WebDev Tutorial</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#tutorial" class="text-secondary hover:text-primary transition-colors">Tutorial</a>
+                    <a href="#github" class="text-secondary hover:text-primary transition-colors">GitHub Pages</a>
+                    <a href="#resources" class="text-secondary hover:text-primary transition-colors">Resources</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary to-blue-700 text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                Belajar Membuat Website
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                Tutorial lengkap dari HTML dasar hingga deploy ke GitHub Pages
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#tutorial" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Mulai Belajar
+                </a>
+                <a href="#github" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors">
+                    GitHub Pages
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorial Section -->
+    <section id="tutorial" class="py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold mb-4">Tutorial Membuat Website</h3>
+                <p class="text-xl text-secondary">Ikuti langkah-langkah berikut untuk membuat website pertama Anda</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1: HTML -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-xl font-bold">1</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3">Buat File HTML</h4>
+                    <p class="text-secondary mb-4">Buat struktur HTML dasar dengan DOCTYPE, head, dan body.</p>
+                    <div class="bg-gray-100 rounded-lg p-4 text-sm">
+                        <code class="text-gray-800">
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="id"&gt;<br>
+                            &lt;head&gt;<br>
+                            &nbsp;&nbsp;&lt;title&gt;Website Saya&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &nbsp;&nbsp;&lt;h1&gt;Hello World!&lt;/h1&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Step 2: CSS -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-xl font-bold">2</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3">Tambahkan CSS</h4>
+                    <p class="text-secondary mb-4">Styling website dengan CSS atau framework seperti Tailwind CSS.</p>
+                    <div class="bg-gray-100 rounded-lg p-4 text-sm">
+                        <code class="text-gray-800">
+                            &lt;link href="https://cdn.tailwindcss.com"<br>
+                            &nbsp;&nbsp;rel="stylesheet"&gt;<br><br>
+                            &lt;div class="bg-blue-500 text-white<br>
+                            &nbsp;&nbsp;p-4 rounded"&gt;<br>
+                            &nbsp;&nbsp;Styled Content<br>
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Step 3: JavaScript -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-xl font-bold">3</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3">Tambahkan JavaScript</h4>
+                    <p class="text-secondary mb-4">Buat website interaktif dengan JavaScript untuk fungsionalitas dinamis.</p>
+                    <div class="bg-gray-100 rounded-lg p-4 text-sm">
+                        <code class="text-gray-800">
+                            &lt;script&gt;<br>
+                            &nbsp;&nbsp;document.getElementById('btn')<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;.addEventListener('click', () =&gt; {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('Hello World!');<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;});<br>
+                            &lt;/script&gt;
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Pages Section -->
+    <section id="github" class="bg-gray-100 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold mb-4">Upload ke GitHub Pages</h3>
+                <p class="text-xl text-secondary">Deploy website Anda secara gratis dengan GitHub Pages</p>
+            </div>
+
+            <!-- Step 1: Create Repository -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-4">
+                                <span class="font-bold">1</span>
+                            </div>
+                            <h4 class="text-2xl font-semibold">Buat Repository GitHub</h4>
+                        </div>
+                        <div class="space-y-4 text-secondary">
+                            <p>• Login ke akun GitHub Anda</p>
+                            <p>• Klik tombol "New" untuk membuat repository baru</p>
+                            <p>• Beri nama repository: <code class="bg-gray-200 px-2 py-1 rounded text-sm">username.github.io</code></p>
+                            <p>• Pastikan repository bersifat <strong>Public</strong></p>
+                            <p>• Centang "Add a README file"</p>
+                            <p>• Klik "Create repository"</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <img src="public/1.jpg" alt="GitHub Create Repository" class="w-full rounded-lg shadow-md">
+                        <p class="text-sm text-gray-600 mt-2 text-center">Tampilan halaman pembuatan repository GitHub</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Upload Files -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <img src="public/2.jpg" alt="GitHub Upload Files" class="w-full rounded-lg shadow-md">
+                            <p class="text-sm text-gray-600 mt-2 text-center">Upload file melalui GitHub web interface</p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-4">
+                                <span class="font-bold">2</span>
+                            </div>
+                            <h4 class="text-2xl font-semibold">Upload File Website</h4>
+                        </div>
+                        <div class="space-y-4 text-secondary">
+                            <p>• Masuk ke repository yang sudah dibuat</p>
+                            <p>• Klik "uploading an existing file" atau drag & drop</p>
+                            <p>• Upload semua file website (HTML, CSS, JS, gambar)</p>
+                            <p>• Pastikan file utama bernama <code class="bg-gray-200 px-2 py-1 rounded text-sm">index.html</code></p>
+                            <p>• Tulis commit message, contoh: "Add website files"</p>
+                            <p>• Klik "Commit changes"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Enable GitHub Pages -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-4">
+                                <span class="font-bold">3</span>
+                            </div>
+                            <h4 class="text-2xl font-semibold">Aktifkan GitHub Pages</h4>
+                        </div>
+                        <div class="space-y-4 text-secondary">
+                            <p>• Masuk ke tab <strong>Settings</strong> di repository</p>
+                            <p>• Scroll ke bawah hingga menemukan <strong>Pages</strong></p>
+                            <p>• Di bagian "Source", pilih <strong>Deploy from a branch</strong></p>
+                            <p>• Pilih branch <strong>main</strong> dan folder <strong>/ (root)</strong></p>
+                            <p>• Klik <strong>Save</strong></p>
+                            <p>• Tunggu beberapa menit untuk deployment</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <img src="public/3.jpg" alt="GitHub Pages Settings" class="w-full rounded-lg shadow-md">
+                        <p class="text-sm text-gray-600 mt-2 text-center">Pengaturan GitHub Pages di repository settings</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Access Website -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <img src="/placeholder.svg?height=300&width=500" alt="Live Website" class="w-full rounded-lg shadow-md">
+                            <p class="text-sm text-gray-600 mt-2 text-center">Website Anda sudah live dan dapat diakses</p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-2xl font-semibold">Website Sudah Live!</h4>
+                        </div>
+                        <div class="space-y-4 text-secondary">
+                            <p>• Website Anda akan tersedia di:</p>
+                            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                <code class="text-blue-800 font-mono">https://username.github.io</code>
+                            </div>
+                            <p>• Proses deployment biasanya memakan waktu 5-10 menit</p>
+                            <p>• Setiap kali Anda update file, website akan otomatis ter-update</p>
+                            <p>• Anda bisa menggunakan custom domain jika diperlukan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Git Commands -->
+            <div class="bg-gray-900 rounded-xl shadow-lg p-8">
+                <h4 class="text-xl font-semibold mb-6 text-white flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Alternatif: Menggunakan Git Command Line
+                </h4>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h5 class="text-lg font-medium mb-3 text-green-400">Setup Awal</h5>
+                        <div class="bg-black rounded-lg p-4 text-green-400 font-mono text-sm">
+                            <div class="mb-2"># Clone repository</div>
+                            <div class="mb-4">git clone https://github.com/username/username.github.io.git</div>
+                            
+                            <div class="mb-2"># Masuk ke folder</div>
+                            <div>cd username.github.io</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-medium mb-3 text-green-400">Upload & Deploy</h5>
+                        <div class="bg-black rounded-lg p-4 text-green-400 font-mono text-sm">
+                            <div class="mb-2"># Tambahkan semua file</div>
+                            <div class="mb-2">git add .</div>
+                            <div class="mb-2">git commit -m "Add website"</div>
+                            <div class="mb-4">git push origin main</div>
+                            
+                            <div class="text-yellow-400"># Website akan live dalam 5-10 menit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold mb-4">Resources & Tools</h3>
+                <p class="text-xl text-secondary">Tools dan resources yang berguna untuk web development</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-2">HTML & CSS</h4>
+                    <p class="text-sm text-secondary">MDN Web Docs, W3Schools</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-2">Tailwind CSS</h4>
+                    <p class="text-sm text-secondary">Utility-first CSS framework</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-gray-100 text-gray-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-2">GitHub</h4>
+                    <p class="text-sm text-secondary">Version control & hosting</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-2">VS Code</h4>
+                    <p class="text-sm text-secondary">Code editor terbaik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-semibold">WebDev Tutorial</h4>
+                    </div>
+                    <p class="text-gray-400">Tutorial lengkap untuk belajar web development dari dasar hingga mahir.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#tutorial" class="hover:text-white transition-colors">Tutorial</a></li>
+                        <li><a href="#github" class="hover:text-white transition-colors">GitHub Pages</a></li>
+                        <li><a href="#resources" class="hover:text-white transition-colors">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400 mb-2">Email: tutorial@webdev.com</p>
+                    <p class="text-gray-400">GitHub: @webdev-tutorial</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 WebDev Tutorial. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
